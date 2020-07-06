@@ -1,0 +1,29 @@
+#include <XBee.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial xbee(0,1);
+char val;
+void setup() {
+              Serial.begin(9600);
+              xbee.begin(9600);
+              }
+void loop() {
+
+    val='A';
+    xbee.print(val);
+    delay(150);
+  
+              /*if(Serial.available()){
+                                     //val=Serial.read();
+                                     //Serial.println(val);
+                                     val='a';
+                                     Serial.println(val);
+                                     xbee.print(val);
+                                     delay(150);
+                                      }
+
+ else{
+                   Serial.write(0);
+                  }*/
+
+             }
